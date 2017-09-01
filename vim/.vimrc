@@ -8,14 +8,6 @@ autocmd! bufwritepost .vimrc source %
 " remap leader from default \ to ,
 let mapleader = ","
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w
-" + <movement>
-" " Every unnecessary keystroke that can be saved is good for your health :)
-" "" map <c-j> <c-w>j
-" "" map <c-k> <c-w>k
-" "" map <c-l> <c-w>l
-" "" map <c-h> <c-w>h
-
 map <leader>n <esc>:tabprevious<CR>
 map <leader>m <esc>:tabnext<CR>
 
@@ -41,8 +33,6 @@ set number    " show line numbers
 set tw=79     " width of document
 set nowrap    " don't automatically wrap on load
 set fo-=t     " don't automatically wrap text when typing
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
 
 " Useful settings
 set history=700
@@ -78,10 +68,9 @@ set smartcase
 execute pathogen#infect()
 
 " Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
-" wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-" set t_Co=256
 colorscheme wombat256mod
+set colorcolumn=80
+hi ColorColumn ctermbg=235 guibg=235
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
@@ -91,11 +80,6 @@ colorscheme wombat256mod
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
-
-" Settings for powerline
-" cd ~/.vim/bundle
-" git clone https://github.com/powerline/powerline.git
-"" set laststatus=2
 
 " Settings for ctrlp
 " cd ~/.vim/bundle
